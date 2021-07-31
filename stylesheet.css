@@ -5,9 +5,11 @@
 }
 
 body {
-  width: 100%;
+  min-width: 320px;
+  max-width: 100%;
   margin: 0 auto;
   animation: fadeIn 3.5s forwards;
+  overflow-x: hidden;
 }
 
 img,
@@ -52,10 +54,6 @@ ul {
 
 .radius2 {
   border-radius: 8px;
-}
-
-.font-scale-up {
-  font-size: 22px;
 }
 
 .new-line {
@@ -207,7 +205,6 @@ ul {
 .menu-content {
   padding-left: 14px;
   padding-bottom: 10px;
-  
 }
 
 #headerMenu a {
@@ -376,10 +373,6 @@ ul {
   animation: movingBack 15s ease-in-out infinite;
 }
 
-/* #about>.heading {
-  right: 32px;
-} */
-
 #about>.heading::before {
   border-bottom: 3px solid rgb(200, 235, 255);
 }
@@ -437,10 +430,6 @@ ul {
   content: "・";
 }
 
-.card3 .font2:not(:first-of-type){
-  margin-top: 8px;
-}
-
 .card-list1>.font5 {
   color: rgba(245, 245, 245);
   padding-left: 20px;
@@ -474,7 +463,6 @@ ul {
   transition: width .8s .4s;
 }
 
-/* .appear>.card-list2>.gauge::after, */
 .appear .gauge::after {
   width: 224px;
 }
@@ -514,11 +502,15 @@ ul {
   height: 100%;
 }
 
+.card3>.card-list1>.font2:not(:first-of-type){
+  margin-top: 8px;
+}
+
 .card-dummy {
   position: absolute;
   top: 48px;
   left: 48px;
-  transition: all 1.4s;
+  transition: all 1.7s;
 }
 
 .card-dummy.appear {
@@ -533,10 +525,6 @@ ul {
   background-position: 200% 200%;
   animation: movingBack 15s ease-in-out infinite;
 }
-
-/* #skill>.heading {
-  left: 32px;
-} */
 
 #skill>.heading::before {
   border-bottom: 3px solid rgb(200, 245, 165);
@@ -591,15 +579,11 @@ ul {
 /* 6 works 1864px ~ px */
 
 #works {
-  background: linear-gradient(-45deg, rgb(255, 255, 255) 23%, rgb(235, 184, 255) 50%, rgb(255, 255, 255) 77%);
+  background: linear-gradient(-45deg, rgb(255, 255, 255) 25%, rgb(235, 184, 255) 50%, rgb(255, 255, 255) 75%);
   background-size: 400% 400%;
   background-position: 200% 200%;
   animation: movingBack 15s ease-in-out infinite;
 }
-
-/* #works>.heading {
-  right: 32px;
-} */
 
 #works>.heading::before {
   border-bottom: 3px solid rgb(235, 184, 255);
@@ -634,7 +618,7 @@ ul {
   padding: 8px 24px;
   transform: translateY(64px);
   opacity: 0;
-  transition: transform .8s, opacity 1s;
+  transition: transform .8s, opacity 1.2s;
 }
 
 .work.card.appear {
@@ -729,6 +713,8 @@ ul {
 .contact-address>i {
   font-size: 48px;
 }
+
+/* copyright */
 
 .copyright {
   text-align: center;

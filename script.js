@@ -25,11 +25,24 @@
     headings.forEach(heading => {
       const distanceToHeading = heading.getBoundingClientRect().top;
 
-      if (distanceToHeading < window.innerHeight * .8) {
-        heading.classList.add('appear');
+      if (window.innerWidth > 580) {
+
+        if (distanceToHeading < window.innerHeight * .8) {
+          heading.classList.add('appear');
+        } else {
+          heading.classList.remove('appear');
+        }
+
       } else {
-        heading.classList.remove('appear');
+
+        if (distanceToHeading < window.innerHeight * .9) {
+          heading.classList.add('appear');
+        } else {
+          heading.classList.remove('appear');
+        }
+
       }
+
     });
   });
 
@@ -37,25 +50,26 @@
 
   const cards = document.querySelectorAll('.card');
 
-  // window.addEventListener(('scroll'), () => {
-  //   for (let i = 0; i < cards.length; i++) {
-  //     const cardsDistance = cards[i].getBoundingClientRect().top;
-
-  //     if (cards[i].clientHeight * -1 < cardsDistance < window.innerHeight * .7) {
-  //       cards[i].classList.add('appear');
-  //     } else {
-  //       cards[i].classList.remove('appear');
-  //     }
-
-  //   }
-  // });
-
   window.addEventListener(('scroll'), () => {
     cards.forEach(card => {
       const distanceToCard = card.getBoundingClientRect().top;
-      // console.log(card.clientHeight * -1);
-      if (distanceToCard < window.innerHeight * .7) {
-        card.classList.add('appear');
+      
+      if (window.innerWidth > 580) {
+
+        if (distanceToCard < window.innerHeight * .7) {
+          card.classList.add('appear');
+        } else {
+          card.classList.remove('appear');
+        }
+
+      } else {
+
+        if (distanceToCard < window.innerHeight * .85) {
+          card.classList.add('appear');
+        } else {
+          card.classList.remove('appear');
+        }
+
       }
     });
   });
