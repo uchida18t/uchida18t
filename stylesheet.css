@@ -10,6 +10,9 @@ body {
   max-width: 100%;
   margin: 0 auto;
   animation: fadeIn 3.5s forwards;
+}
+
+.wrapper-for-hidden {
   overflow-x: hidden;
 }
 
