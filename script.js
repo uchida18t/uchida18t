@@ -17,6 +17,30 @@
     headerMenu.classList.remove('slide-in');
   });
 
+  // scroll-trigger
+
+  const triggers = document.querySelectorAll('.scroll-trigger');
+  const mainWrappers = document.querySelectorAll('.main-wrapper');
+  
+  for (let i = 0; i < 4; i++) {
+    const triggerPoint = mainWrappers[i].getBoundingClientRect().top + window.pageYOffset;
+    triggers[i].addEventListener('click', () => {
+      if (window.innerWidth > 1080) {
+        window.scrollTo({
+          top: triggerPoint,
+          behavior: 'smooth',
+        });
+      } else if (580 < window.innerWidth <= 1080) {
+        window.scrollTo({
+          top: triggerPoint,
+          behavior: 'smooth',
+        });
+      }
+    });
+  }
+
+
+
   // heading
 
   const headings = document.querySelectorAll('.heading');

@@ -211,6 +211,7 @@ ul {
   text-decoration: none;
   color: rgb(121, 139, 180);
   position: relative;
+  cursor: pointer;
 }
 
 #headerMenu a::before {
