@@ -731,3 +731,7 @@ ul {
   position: absolute;
   bottom: 0;
 }
+
+.under319 {
+  display: none;
+}
