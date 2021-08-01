@@ -111,7 +111,7 @@
 
   #topWrapper {
     min-height: 584px;
-    height: 100vh * .92;
+    height: calc(100vh * .92);
   }
 
   .top-wrapper-content>h1 {
@@ -384,7 +384,6 @@
 
   #topWrapper {
     max-height: 700px;
-    height: 100vh * .92;
   }
 
   .top-wrapper-content>h1 {
